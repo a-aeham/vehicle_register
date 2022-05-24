@@ -1,0 +1,53 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class DetailsController {
+  uploadDetails(
+    String baseNum,
+    String bodyNum,
+    String motorNum,
+    String city,
+    String type,
+    String serial,
+    String clas,
+    String brand,
+    String model,
+    String year,
+    String made,
+    String capacity,
+    String hourse,
+    String cylinder,
+    String fuel,
+    String color,
+    String passengers,
+    String gamb,
+    String bodyType,
+    String axels,
+    String cookpit,
+    String wheel,
+  ) async {
+    await FirebaseFirestore.instance.collection('vehicle').doc().set({
+      'baseNumber': baseNum,
+      'bodyNumber': bodyNum,
+      'MotorNumber': motorNum,
+      'city': city,
+      'type ': type,
+      'serial': serial,
+      'clas': clas,
+      'brand': brand,
+      'model': model,
+      'year': year,
+      'made': made,
+      'capacity': capacity,
+      'hourse': hourse,
+      'cylinder': cylinder,
+      'fuel': fuel,
+      'color': color,
+      'passengers': passengers,
+      'gamb': gamb,
+      'bodyType': bodyType,
+      'axels': axels,
+      'cookpit': cookpit,
+      'wheel': wheel,
+    });
+  }
+}
